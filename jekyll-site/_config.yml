@@ -2,10 +2,10 @@
 title: CM - Web Development
 author: Cipriano Mazzieri. CM - Web Development
 email: cmazzieri@gmail.com
-description: > # this means to ignore newlines until "baseurl:"
+description: > #"baseurl:"
   CM - Web Development is a web development studio focused on creating simple, nice looking and fast websites.
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://localhost:4000" # the base hostname & protocol for your site
+baseurl: ""
+url: "http://localhost:4000"
 twitter_username: jekyllrb
 github_username:  jekyll
 
