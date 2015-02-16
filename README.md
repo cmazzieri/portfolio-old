@@ -1,6 +1,6 @@
 # Portfolio
 
-##To Dos
+##ToDos
 
 <ul>
 	<li><del>Hook javascript</del></li>
