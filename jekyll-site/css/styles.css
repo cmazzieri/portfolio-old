@@ -11,8 +11,9 @@
 	+ blueHover: #296496, rgb(41, 100, 150).
 	+ blueLight: #89D2E9, rgb(137, 210, 233).
 	+ white: #EEEEEE, rgb(238, 238, 238).
-	+ grey: #6E6E6E, rgb(110, 110, 110).
+	+ grey: #5E5E5E, rgb(110, 110, 110).
 	+ greyDarker: #333333, rgb(51, 51, 51).
+  + orange: #FF9933, rgb(255, 153, 51).
 
 */
 
@@ -51,13 +52,14 @@ h3,
 h4,
 h5,
 h6 {
+    color:#FF9933;
     text-transform: uppercase;
     font-family: sans-serif;
 }
 
 hr.star-light,
 hr.star-primary {
-    margin: 25px auto 30px;
+    margin: 30px auto 45px;
     padding: 0;
     max-width: 40%;
     border: 0;
@@ -66,7 +68,6 @@ hr.star-primary {
 }
 
 hr.star-light:after,
-
 hr.star-light {
     border-color: #fff;
 }
@@ -77,7 +78,7 @@ hr.star-light:after {
 }
 
 hr.star-primary {
-    border-color: #2c3e50;
+    border-color: #89D2E9;
 }
 
 hr.star-primary:after {
@@ -115,7 +116,6 @@ hr.star-primary:after {
 .landing-page {
     color: #6E6E6E;
     text-align: center;
-    background: 
 }
 
 .landing-page .container {
@@ -123,36 +123,49 @@ hr.star-primary:after {
     padding-bottom: 50px;
 }
 
-.landing-page img {
-    display: block;
-    margin: 0 auto 20px;
-}
-
 .landing-page .intro-text .name {
-	color:#444444;
+	color:#FF9933;
   text-transform: capitalize;
   font-size: 2em;
   display: block;
 }
 
+.intro-text img {
+  margin:0 auto;
+}
+
 .landing-page .intro-text .skills {
-    font-size: 1em;
-    font-weight: 300;
+  font-size: 1em;
+  font-weight: 300;
+  margin:20px 0;
 }
 
 @media(min-width:768px) {
     .landing-page .container {
         padding-top: 100px;
-        padding-bottom: 100px;
+        padding-bottom: 80px;
     }
 
     .landing-page .intro-text .name {
         font-size: 2.75em;
     }
 
+    .intro-text img {
+      margin:0 20px 85px 0;
+      float: left;
+    }
+
     .landing-page .intro-text .skills {
         font-size: 1.25em;
     }
+}
+
+@media(min-width:900px) {
+
+  .landing-page .intro-text .skills {
+    line-height: 1.7;
+    margin:0 0 40px;
+  }  
 }
 
 /* ---------------------------------------- */
@@ -176,7 +189,7 @@ hr.star-primary:after {
 }
 
 .navbar .navbar-nav {
-    letter-spacing: 1px;
+  letter-spacing: 1px;
 }
 
 .navbar .navbar-nav li a:focus {
@@ -189,33 +202,34 @@ hr.star-primary:after {
 }
 
 @media(min-width:768px) {
-    .navbar-brand-fixed-top {
-        padding: 15px 0;
-        -webkit-transition: padding .3s;
-        -moz-transition: padding .3s;
-        transition: padding .3s;
-    }
 
-    .navbar-fixed-top .navbar-brand {
-        font-size: 2em;
-        text-transform: capitalize;
-        -webkit-transition: all .3s;
-        -moz-transition: all .3s;
-        transition: all .3s;
-    }
+  .navbar-brand-fixed-top {
+      padding: 15px 0;
+      -webkit-transition: padding .3s;
+      -moz-transition: padding .3s;
+      transition: padding .3s;
+  }
 
-    .navbar-fixed-top.navbar-shrink {
-        padding: 0px 0;
-    }
+  .navbar-fixed-top .navbar-brand {
+      font-size: 2em;
+      text-transform: capitalize;
+      -webkit-transition: all .3s;
+      -moz-transition: all .3s;
+      transition: all .3s;
+  }
 
-    .navbar-fixed-top.navbar-shrink .navbar-brand {
-			color: #89D2E9;
-      font-size: 1.5em;
-    }
+  .navbar-fixed-top .navbar-brand:hover {
+    color: #89D2E9;
+  }
 
-    .navbar-fixed-top.navbar-shrink .navbar-brand:hover {
-    	color: #FFFFFF;
-    }
+  .navbar-fixed-top.navbar-shrink {
+      padding: 0px 0;
+  }
+
+  .navbar-fixed-top.navbar-shrink .navbar-brand {
+    font-size: 1.5em;
+  }
+
 }
 
 /* -------------------------------------- */
@@ -230,10 +244,10 @@ section h2 {
     font-size: 3em;
 }
 
-section.success {
+/*section.success {
     color: #fff;
     background: #18bc9c;
-}
+}*/
 
 @media(max-width:767px) {
     section {
@@ -377,7 +391,7 @@ form .row:first-child .floating-label-form-group {
 }
 
 footer {
-    color: #fff;
+    color: #FF9933;
 }
 
 footer h3 {
@@ -395,7 +409,7 @@ footer .footer-col {
 
 footer .footer-below {
     padding: 25px 0;
-    background-color: #233140;
+    background-color: rgba(137, 210, 233, 0.4);
 }
 
 .btn-social {
