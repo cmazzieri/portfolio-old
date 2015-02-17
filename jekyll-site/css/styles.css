@@ -4,8 +4,28 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
+/*
+	* ------- COLORS ------- *
+
+	+ blue: #428BCA, rgb(66,139,202).
+	+ blueHover: #296496, rgb(41, 100, 150).
+	+ blueLight: #89D2E9, rgb(137, 210, 233).
+	+ white: #EEEEEE, rgb(238, 238, 238).
+	+ grey: #6E6E6E, rgb(110, 110, 110).
+	+ greyDarker: #333333, rgb(51, 51, 51).
+
+*/
+
 body {
-    overflow-x: hidden;
+	font-family: sans-serif;
+  overflow-x: hidden;
+}
+
+.navbar > .container,
+section > .container,
+.landing-page > .container,
+.footer-below > .container {
+	max-width: 960px;
 }
 
 p {
@@ -32,30 +52,20 @@ h4,
 h5,
 h6 {
     text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-weight: 700;
+    font-family: sans-serif;
 }
 
 hr.star-light,
 hr.star-primary {
     margin: 25px auto 30px;
     padding: 0;
-    max-width: 250px;
+    max-width: 40%;
     border: 0;
-    border-top: solid 5px;
+    border-top: solid 1px;
     text-align: center;
 }
 
 hr.star-light:after,
-hr.star-primary:after {
-    content: "\f005";
-    display: inline-block;
-    position: relative;
-    top: -.8em;
-    padding: 0 .25em;
-    font-family: FontAwesome;
-    font-size: 2em;
-}
 
 hr.star-light {
     border-color: #fff;
@@ -79,83 +89,90 @@ hr.star-primary:after {
     margin: 0 auto;
 }
 
-header {
-    text-align: center;
-    color: #fff;
-    background: #18bc9c;
+/* ------------------------------------------ */
+/* ++++++++++++++ LANDING PAGE ++++++++++++++ */
+
+.logo {
+	font-family: 'Gilda Display', serif;
+	font-size: 6em;
+	margin-top: 20px;
 }
 
-header .container {
-    padding-top: 100px;
+.main-logo-letter {
+	color: #89D2E9;
+}
+
+.sec-logo-letter {
+	color: #6E6E6E;
+}
+
+@media(min-width:768px) {
+	.logo {
+		font-size: 9em;
+	}
+}
+
+.landing-page {
+    color: #6E6E6E;
+    text-align: center;
+    background: 
+}
+
+.landing-page .container {
+    padding-top: 50px;
     padding-bottom: 50px;
 }
 
-header img {
+.landing-page img {
     display: block;
     margin: 0 auto 20px;
 }
 
-header .intro-text .name {
-    display: block;
-    text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-size: 2em;
-    font-weight: 700;
+.landing-page .intro-text .name {
+	color:#444444;
+  text-transform: capitalize;
+  font-size: 2em;
+  display: block;
 }
 
-header .intro-text .skills {
-    font-size: 1.25em;
+.landing-page .intro-text .skills {
+    font-size: 1em;
     font-weight: 300;
 }
 
 @media(min-width:768px) {
-    header .container {
-        padding-top: 200px;
+    .landing-page .container {
+        padding-top: 100px;
         padding-bottom: 100px;
     }
 
-    header .intro-text .name {
-        font-size: 4.75em;
+    .landing-page .intro-text .name {
+        font-size: 2.75em;
     }
 
-    header .intro-text .skills {
-        font-size: 1.75em;
+    .landing-page .intro-text .skills {
+        font-size: 1.25em;
     }
 }
 
-@media(min-width:768px) {
-    .navbar-fixed-top {
-        /*padding: 25px 0;*/
-        -webkit-transition: padding .3s;
-        -moz-transition: padding .3s;
-        transition: padding .3s;
-    }
+/* ---------------------------------------- */
+/* ++++++++++++++ NAVIGATION ++++++++++++++ */
 
-    .navbar-fixed-top .navbar-brand {
-        font-size: 2em;
-        text-transform: capitalize;
-        -webkit-transition: all .3s;
-        -moz-transition: all .3s;
-        transition: all .3s;
-    }
-
-    .navbar-fixed-top.navbar-shrink {
-        padding: 10px 0;
-    }
-
-    .navbar-fixed-top.navbar-shrink .navbar-brand {
-        font-size: 1.5em;
-    }
-}
 
 .navbar {
     text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-weight: 700;
+    font-family: sans-serif;
+    min-height: 60px;
 }
 
 .navbar a:focus {
     outline: 0;
+}
+
+.navbar-header > a.current,
+.navbar-default .navbar-nav > li > a.current {
+	color:#89D2E9;
+	border-bottom:5px solid #89D2E9;
 }
 
 .navbar .navbar-nav {
@@ -170,6 +187,39 @@ header .intro-text .skills {
 .navbar-inverse {
     border: 0;
 }
+
+@media(min-width:768px) {
+    .navbar-brand-fixed-top {
+        padding: 15px 0;
+        -webkit-transition: padding .3s;
+        -moz-transition: padding .3s;
+        transition: padding .3s;
+    }
+
+    .navbar-fixed-top .navbar-brand {
+        font-size: 2em;
+        text-transform: capitalize;
+        -webkit-transition: all .3s;
+        -moz-transition: all .3s;
+        transition: all .3s;
+    }
+
+    .navbar-fixed-top.navbar-shrink {
+        padding: 0px 0;
+    }
+
+    .navbar-fixed-top.navbar-shrink .navbar-brand {
+			color: #89D2E9;
+      font-size: 1.5em;
+    }
+
+    .navbar-fixed-top.navbar-shrink .navbar-brand:hover {
+    	color: #FFFFFF;
+    }
+}
+
+/* -------------------------------------- */
+/* ++++++++++++++ SECTIONS ++++++++++++++ */
 
 section {
     padding: 100px 0;
