@@ -7,18 +7,21 @@
 /*
 	* ------- COLORS ------- *
 
-	+ blue: #428BCA, rgb(66,139,202).
-	+ blueHover: #296496, rgb(41, 100, 150).
-	+ blueLight: #89D2E9, rgb(137, 210, 233).
-	+ white: #EEEEEE, rgb(238, 238, 238).
-	+ grey: #5E5E5E, rgb(110, 110, 110).
-	+ greyDarker: #333333, rgb(51, 51, 51).
-  + orange: #FF9933, rgb(255, 153, 51).
+	+ blue: 								#428BCA, rgb(66,139,202).
+	+ blueLight: 						#89D2E9, rgb(137, 210, 233).
+	@ variant to blueLight: #81D0E8, rgb(129, 208, 232). CURRENT!!!
+	@ grey: 								#5E5E5E, rgb(110, 110, 110). CURRENT!!!
+	+ greyDarker: 					#333333, rgb(51, 51, 51).
+  + orange: 							#FF9933, rgb(255, 153, 51).
+  @ variant to orange: 		#FF8822, rgb(255, 136, 34). CURRENT!!!
+  + orange for form:			#FF6600
+	+ white: 								#EEEEEE, rgb(238, 238, 238).
 
 */
 
 body {
 	font-family: sans-serif;
+	font-weight: 300;
   overflow-x: hidden;
 }
 
@@ -43,7 +46,7 @@ a:focus,
 a:active,
 a.active {
     outline: 0;
-    color: #18bc9c;
+    color: #FF9933;
 }
 
 h1,
@@ -78,7 +81,7 @@ hr.star-light:after {
 }
 
 hr.star-primary {
-    border-color: #89D2E9;
+    border-color: #81D0E8;
 }
 
 hr.star-primary:after {
@@ -100,7 +103,7 @@ hr.star-primary:after {
 }
 
 .main-logo-letter {
-	color: #89D2E9;
+	color: #81D0E8;
 }
 
 .sec-logo-letter {
@@ -184,8 +187,8 @@ hr.star-primary:after {
 
 .navbar-header > a.current,
 .navbar-default .navbar-nav > li > a.current {
-	color:#89D2E9;
-	border-bottom:5px solid #89D2E9;
+	color:#81D0E8;
+	border-bottom:5px solid #81D0E8;
 }
 
 .navbar .navbar-nav {
@@ -219,7 +222,7 @@ hr.star-primary:after {
   }
 
   .navbar-fixed-top .navbar-brand:hover {
-    color: #89D2E9;
+    color: #81D0E8;
   }
 
   .navbar-fixed-top.navbar-shrink {
@@ -235,8 +238,15 @@ hr.star-primary:after {
 /* -------------------------------------- */
 /* ++++++++++++++ SECTIONS ++++++++++++++ */
 
+#contact {
+	background: #EEEEEE;
+}
+
 section {
-    padding: 100px 0;
+  padding: 100px 0;
+	-webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  position: relative;
 }
 
 section h2 {
@@ -334,42 +344,51 @@ section h2 {
     background: #fff;
 }
 
+/* -------------------------------------- */
+/* ++++++++++++++ CONTACT ++++++++++++++ */
+
 .floating-label-form-group {
-    position: relative;
-    margin-bottom: 0;
-    padding-bottom: .5em;
-    border-bottom: 1px solid #eee;
+	background: #FFFFFF;
+  -moz-box-shadow:    inset 0 0 7px #81D0E8;
+  -webkit-box-shadow: inset 0 0 7px #81D0E8;
+  box-shadow:         inset 0 0 7px #81D0E8;  
+  padding-bottom: .5em;
+  border-bottom: 1px solid #eee;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  position: relative;
 }
 
 .floating-label-form-group input,
 .floating-label-form-group textarea {
-    z-index: 1;
-    position: relative;
-    padding-right: 0;
-    padding-left: 0;
-    border: 0;
-    border-radius: 0;
-    font-size: 1.5em;
-    background: 0 0;
-    box-shadow: none!important;
-    resize: none;
+	color: #333333;
+  z-index: 1;
+  position: relative;
+  padding-right: 0;
+  padding-left: 0;
+  border: 0;
+  border-radius: 5px;
+  font-size: 1.3em;
+  background: 0 0;
+  resize: none;
 }
 
 .floating-label-form-group label {
-    display: block;
-    z-index: 0;
-    position: relative;
-    top: 2em;
-    margin: 0;
-    font-size: .85em;
-    line-height: 1.764705882em;
-    vertical-align: middle;
-    vertical-align: baseline;
-    opacity: 0;
-    -webkit-transition: top .3s ease,opacity .3s ease;
-    -moz-transition: top .3s ease,opacity .3s ease;
-    -ms-transition: top .3s ease,opacity .3s ease;
-    transition: top .3s ease,opacity .3s ease;
+	color: #FF8822;
+  display: block;
+  z-index: 0;
+  position: relative;
+  top: 2em;
+  margin: 0;
+  font-size: .85em;
+  line-height: 1.764705882em;
+  vertical-align: middle;
+  vertical-align: baseline;
+  opacity: 0;
+  -webkit-transition: top .3s ease,opacity .3s ease;
+  -moz-transition: top .3s ease,opacity .3s ease;
+  -ms-transition: top .3s ease,opacity .3s ease;
+  transition: top .3s ease,opacity .3s ease;
 }
 
 .floating-label-form-group::not(:first-child) {
@@ -378,12 +397,18 @@ section h2 {
 }
 
 .floating-label-form-group-with-value label {
-    top: 0;
+    top: 5px;
     opacity: 1;
 }
 
 .floating-label-form-group-with-focus label {
-    color: #18bc9c;
+    color: #81D0E8;
+}
+
+.floating-label-form-group-with-focus {
+  -moz-box-shadow:    inset 0 0 7px #FF6600;
+  -webkit-box-shadow: inset 0 0 7px #FF6600;
+  box-shadow:         inset 0 0 7px #FF6600;
 }
 
 form .row:first-child .floating-label-form-group {
@@ -391,7 +416,7 @@ form .row:first-child .floating-label-form-group {
 }
 
 footer {
-    color: #FF9933;
+    color: #5E5E5E;
 }
 
 footer h3 {
@@ -409,7 +434,7 @@ footer .footer-col {
 
 footer .footer-below {
     padding: 25px 0;
-    background-color: rgba(137, 210, 233, 0.4);
+    background-color: #81D0E8; /*rgba(137, 210, 233, 0.8);*/
 }
 
 .btn-social {
