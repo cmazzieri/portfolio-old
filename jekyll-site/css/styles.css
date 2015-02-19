@@ -21,7 +21,6 @@
 
 body {
 	font-family: sans-serif;
-	font-weight: 300;
   overflow-x: hidden;
 }
 
@@ -376,11 +375,11 @@ figcaption {
 
 #about h3 {
 	text-align: center;
+	margin-bottom: 21px;
 }
 
-.tab-content ul p,
 .tab-content ul figcaption {
-	margin:0;
+	margin:5px 0;
 }
 
 .tab-content ul p {
