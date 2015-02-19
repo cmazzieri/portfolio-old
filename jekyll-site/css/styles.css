@@ -33,12 +33,19 @@ section > .container,
 }
 
 p {
-    font-size: 20px;
+    font-size: 16px;
+}
+
+@media(min-width: 665px) {
+	p {
+		font-size: 20px
+	}
 }
 
 p.small {
     font-size: 16px;
 }
+
 
 a,
 a:hover,
@@ -56,8 +63,8 @@ h4,
 h5,
 h6 {
     color:#FF9933;
-    text-transform: uppercase;
-    font-family: sans-serif;
+    text-transform: capitalize;
+    font-family: 'Gilda Display', serif;
 }
 
 hr.star-light,
@@ -176,9 +183,12 @@ hr.star-primary:after {
 
 
 .navbar {
-    text-transform: uppercase;
-    font-family: sans-serif;
-    min-height: 60px;
+  text-transform: uppercase;
+  font-family: sans-serif;
+  border-bottom: 5px solid #81D0E8;
+  -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  min-height: 60px;
 }
 
 .navbar a:focus {
@@ -199,7 +209,6 @@ hr.star-primary:after {
     outline: 0;
 }
 
-.navbar-default,
 .navbar-inverse {
     border: 0;
 }
@@ -267,6 +276,24 @@ section h2 {
     section.first {
         padding-top: 75px;
     }
+}
+
+/* -------------------------------------- */
+/* ++++++++++++++ PORTFOLIO ++++++++++++++ */
+
+figcaption {
+	text-align: center;
+	margin: 10px 0 25px;
+}
+
+@media(min-width: 768px) {
+	figcaption {
+		margin-top: 15px;
+	}
+}
+
+#slider .pager {
+	margin-top: 0px;
 }
 
 #portfolio .portfolio-item {
@@ -344,7 +371,28 @@ section h2 {
     background: #fff;
 }
 
-/* -------------------------------------- */
+/* ----------------------------------- */
+/* ++++++++++++++ ABOUT ++++++++++++++ */
+
+#about h3 {
+	text-align: center;
+}
+
+.tab-content ul p,
+.tab-content ul figcaption {
+	margin:0;
+}
+
+.tab-content ul p {
+	line-height: 1;
+}
+
+#skills-tab img {
+	width: 64px;
+	height: 64px;
+}
+
+/* ------------------------------------- */
 /* ++++++++++++++ CONTACT ++++++++++++++ */
 
 .floating-label-form-group {

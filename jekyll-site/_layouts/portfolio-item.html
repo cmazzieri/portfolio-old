@@ -1,0 +1,20 @@
+---
+layout: portfolio-slider
+---
+
+<div class="modal-body">
+	<figure>
+  	<img src="{{page.image}}" class="img-responsive img-centered" alt="">
+  	<figcaption><a href="{{page.website-url}}" target="_blank"><small>Go to Website (but please come back)</small></a></figcaption>
+  </figure>
+  <!-- TABBED MENU ITEMS -->
+  <ul class="nav nav-tabs text-center">
+  	<li class="active"><a aria-expanded="true" href="#description-tab" data-toggle="tab">Description</a></li>
+  	<li><a aria-expanded="false" href="#skills-tab" data-toggle="tab">Skills</a></li>
+  </ul>
+  {{ content }}
+  <ul class="list-inline item-details">
+    <li>Client: <strong>{{ page.client }}</strong></li>
+    <li>Date: <strong>{{ page.date }}</strong></li>
+  </ul>
+</div>
